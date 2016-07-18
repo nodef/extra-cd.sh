@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# M Bole to
+# : Sanjay Dutta, Vinod Rathod, Priya Mayekar
 function ocd() {
 
 # prepare
@@ -26,6 +27,8 @@ elif [[ "$c" == "=" ]]; then
 else
 	pushd "$a" > /dev/null
 fi
+
+# list directory
 if [[ "$x" == "0" ]]; then
 	ls --color --group-directories-first
 	echo
