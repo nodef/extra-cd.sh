@@ -43,14 +43,14 @@ $ ocd /
 $ ocd =work
 
 # remove workspace shortcut
-> ocd -work
+$ ocd -work
 
 # add relative path shortcut
-> ocd +up3 ../../..
+$ ocd +up3 ../../..
 
 # go up 3 directories
-> ocd =up3
+$ ocd =up3
 
 # remove relative path shortcut
-> ocd -up3
+$ ocd -up3
 ```
