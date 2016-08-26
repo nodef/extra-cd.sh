@@ -14,7 +14,7 @@ $ echo "source <path to ocd.sh>" >> ~/.bashrc
 ## usage
 
 ```bash
-$ ocd [-|[-|+|=]<path>]
+$ ocd [- | [+<shortcut> [path] | -<shortcut> | =<shortcut>]]
 
 # [] -> optional argument
 # <> -> argument value
@@ -44,9 +44,13 @@ $ ocd =work
 
 # remove workspace shortcut
 > ocd -work
+
+# add relative path shortcut
+> ocd +up3 ../../..
+
+# go up 3 directories
+> ocd =up3
+
+# remove relative path shortcut
+> ocd -up3
 ```
-
-
-## license
-
-Are you Anonymous? That's enough!

@@ -8,14 +8,18 @@ local d="$HOME/.config/0rez/ocd"
 mkdir -p $d
 
 # options
-local x="0"
-local a="$*"
+local x=0
+local a="$1"
 local c="${a::1}"
 local f="$d/${a:1:${#a}}.ini"
 if [[ "$a" == "-" ]]; then
 	popd > /dev/null
 elif [[ "$c" == "+" ]]; then
-	pwd > "$f" && x=1
+	if [[ "$2" == "" ]]; then
+		pwd > "$f" && x=1
+	else
+		echo "$2" > "$f" && x=1
+	fi
 elif [[ "$c" == "-" ]]; then
 	rm -f "$f" && x=1
 elif [[ "$c" == "=" ]]; then
