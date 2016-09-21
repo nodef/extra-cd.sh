@@ -1,40 +1,32 @@
 #!/bin/bash
 # M Bole to
 # : Sanjay Dutta, Vinod Rathod, Priya Mayekar
+
 function ocd() {
 
 # prepare
-local d="$HOME/.config/0rez/ocd"
-mkdir -p $d
+local d="${HOME}/.config/0rez/ocd"
+mkdir -p ${d}
 
 # options
-local x=0
+local x="0"
 local a="$1"
-local c="${a::1}"
-local f="$d/${a:1:${#a}}.ini"
-if [[ "$a" == "-" ]]; then
-	popd > /dev/null
-elif [[ "$c" == "+" ]]; then
-	if [[ "$2" == "" ]]; then
-		pwd > "$f" && x=1
-	else
-		echo "$2" > "$f" && x=1
-	fi
-elif [[ "$c" == "-" ]]; then
-	rm -f "$f" && x=1
-elif [[ "$c" == "=" ]]; then
-	if [[ -f "$f" ]]; then
-		pushd $(cat "$f") > /dev/null
-	else
-		>&2 echo "err: no such shortcut." && x=1
-	fi
+local c="${a:0:1}"
+local f="${d}/${a:1}.ini"
+if [[ "${a}" == "-" ]]; then
+	x="1" && popd > /dev/null
+elif [[ "${c}" == "+" ]]; then
+	if [[ "$2" == "" ]]; then pwd > "${f}"; else echo "$2" > "${f}"; fi
+elif [[ "${c}" == "-" ]]; then
+	rm -f "${f}"
+elif [[ "${c}" == "=" ]]; then
+	x="1" && pushd $(cat "$f") > /dev/null
 else
-	pushd "$a" > /dev/null
+	x="1" && pushd "${a}" > /dev/null
 fi
 
 # list directory
-if [[ "$x" == "0" ]]; then
-	ls --color --group-directories-first
-	echo
+if [[ "${x}" == "1" ]]; then
+	ls --color --group-directories-first && echo
 fi
 }
