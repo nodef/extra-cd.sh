@@ -1,5 +1,5 @@
 Change to directories with shortcut names in Linux Terminal.
-> 1. Download [bash script](https://github.com/bashf/extra-bel/releases/download/1.0.0/ebel).
+> 1. Download [bash script](https://github.com/bashf/extra-cd/releases/download/1.0.0/ecd).
 > 2. Set execute permission on the `bash script`, and copy to `~/scripts`.
 > 3. Source the script in .bashrc: `echo "source <path to ecd>" >> ~/.bashrc`.
 
