@@ -47,4 +47,4 @@ $ ecd -up3
 ```
 
 
-[![Merferry](https://i.imgur.com/Ki9lyzP.jpg)](https://merferry.github.io)
+[![bashf](https://i.imgur.com/Ki9lyzP.jpg)](https://bashf.github.io)
