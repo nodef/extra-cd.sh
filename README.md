@@ -4,8 +4,6 @@ Change to directories with shortcut names in Linux Terminal.
 > 3. Source the script in .bashrc: `echo "source <path to ecd>" >> ~/.bashrc`.
 
 
-## usage
-
 ```bash
 $ ecd [- | [+<shortcut> [path] | -<shortcut> | =<shortcut>]]
 
