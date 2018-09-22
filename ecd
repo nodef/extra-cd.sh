@@ -2,7 +2,7 @@
 # M Bole to
 # : Sanjay Dutta, Vinod Rathod, Priya Mayekar
 
-function ocd() {
+function ecd() {
 
 # prepare
 local d="${HOME}/.config/0rez/ocd"
