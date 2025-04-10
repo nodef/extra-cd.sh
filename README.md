@@ -48,3 +48,4 @@ $ ecd -up3
 
 
 [![bashf](https://i.imgur.com/Ki9lyzP.jpg)](https://bashf.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/extra-cd.sh)
